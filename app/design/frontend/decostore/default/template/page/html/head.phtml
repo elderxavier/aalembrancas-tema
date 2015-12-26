@@ -1,0 +1,386 @@
+<script type="text/javascript">var slide_on=false;</script>
+<?php 
+function themeOptions ($themeOption) {
+	switch ($themeOption) {
+     
+     /* GENERAL */
+     
+     case 'additionalLink':
+	   return Mage::getStoreConfig('deco/generaloptions/additional_nav');
+	 break;
+     case 'menutype':
+       return Mage::getStoreConfig('deco/generaloptions/menutype');
+	 break;
+     case 'topbanner':
+	   return Mage::getStoreConfig('deco/generaloptions/topbanner');
+	 break;     
+     case 'phones':
+	   return Mage::getStoreConfig('deco/generaloptions/phones');
+	 break;
+     case 'additionalLinkUrl':
+	   return Mage::getStoreConfig('deco/generaloptions/additional_nav_href');
+	 break;
+     
+      /* BackGroung */
+     
+     case 'pattern':
+	   return Mage::getStoreConfig('deco/background/pattern');
+	 break; 
+     case 'maincolor':
+	   return Mage::getStoreConfig('deco/background/maincolor');
+	 break;  
+     case 'bg_repeat':
+	   return Mage::getStoreConfig('deco/background/bg_repeat');
+	 break;  
+     case 'bg_attachment':
+	   return Mage::getStoreConfig('deco/background/bg_attachment');
+	 break;  
+     case 'bg_position_x':
+	   return Mage::getStoreConfig('deco/background/bg_position_x');
+	 break; 
+     case 'bg_position_y':
+	   return Mage::getStoreConfig('deco/background/bg_position_y');
+	 break;   
+     
+     /* PRODUCT LIST */
+     
+     case 'layer':
+       return Mage::getStoreConfig('deco/product_list/layer');
+	 break;
+
+     case 'use_share':
+	   return (Mage::getStoreConfig('deco/share/use_share') == 1);
+	 break;
+     case 'share_code':
+	   return Mage::getStoreConfig('deco/share/share_code');
+	 break;
+     case 'use_slideshow':
+	   return (Mage::getStoreConfig('deco/slideshow/use_slideshow') == 1);
+	 break;
+     case 'speed':
+	   return Mage::getStoreConfig('deco/slideshow/speed');
+	 break;
+     case 'use_zoom':
+	   return (Mage::getStoreConfig('deco/productpage/use_zoom') == 1);
+	 break;
+     case 'use_carousel':
+	   return (Mage::getStoreConfig('deco/productpage/use_carousel') == 1);
+	 break;
+     
+     /* COLORS */
+     
+     case 'active_color':
+	   return Mage::getStoreConfig('deco/colors/active_color');
+	 break;
+     case 'light_color':
+	   return Mage::getStoreConfig('deco/colors/light_color');
+	 break;
+     case 'button1':
+	   return Mage::getStoreConfig('deco/colors/button1');
+	 break;
+     case 'button1_hover':
+	   return Mage::getStoreConfig('deco/colors/button1_hover');
+	 break;
+     case 'button2':
+	   return Mage::getStoreConfig('deco/colors/button2');
+	 break;
+     case 'button2_hover':
+	   return Mage::getStoreConfig('deco/colors/button2_hover');
+	 break;
+     
+     /* FOOTER */
+     
+     case 'use_prefooter':
+	   return (Mage::getStoreConfig('deco/footer/use_prefooter') == 1);
+	 break;
+     case 'block_1':
+	   return Mage::getStoreConfig('deco/footer/block_1');
+	 break;
+     case 'block_2':
+	   return Mage::getStoreConfig('deco/footer/block_2');
+	 break;
+     case 'block_1_title':
+	   return Mage::getStoreConfig('deco/footer/block_1_title');
+	 break;
+     case 'block_2_title':
+	   return Mage::getStoreConfig('deco/footer/block_2_title');
+	 break;
+     case 'use_facebook':
+	   return (Mage::getStoreConfig('deco/footer/use_facebook') == 1);
+	 break;
+     case 'fb_title':
+	   return Mage::getStoreConfig('deco/footer/fb_title');
+	 break;
+     case 'fb_text':
+	   return Mage::getStoreConfig('deco/footer/fb_text');
+	 break;
+     case 'fb_id':
+	   return Mage::getStoreConfig('deco/footer/fb_id');
+	 break;
+     case 'use_twitter':
+	   return (Mage::getStoreConfig('deco/footer/use_twitter') == 1);
+	 break;
+     case 'tw_title':
+	   return Mage::getStoreConfig('deco/footer/tw_title');
+	 break;
+     case 'tw_text':
+	   return Mage::getStoreConfig('deco/footer/tw_text');
+	 break;
+     case 'tw_id':
+	   return Mage::getStoreConfig('deco/footer/tw_id');
+	 break;     
+     default:
+        return Mage::getStoreConfig($themeOption);
+     break;
+     
+	}
+}
+?>
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+
+<!-- MENU -->
+<?php $menutype = themeOptions('menutype'); ?>
+<?php if($menutype == 1): ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/menu1.css'); ?>" media="screen"/>
+<?php elseif($menutype == 2): ?>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/menu2.css'); ?>" media="screen"/>
+    <script type="text/javascript" src="<?php echo $this->getJsUrl('varien/menu.js'); ?>"></script>
+<?php endif; ?>
+<!-- CUSTOM COLORS AND FONTS -->
+<script type="text/javascript">
+    var ribBg = '<?php echo themeOptions('button1') ?>';
+</script>
+<?php 
+$selectors = Array();
+$selectors['active_color'] = '
+a:hover,
+.block-cart-header .view_all,
+.currency span,
+.form-search button.button span,
+.jqTransformSelectWrapper ul a.selected,
+.jqTransformSelectWrapper ul a:hover,
+#nav ul li.over > a > span,
+.opc .allow.active .step-title h2,
+.regular-price .price,
+.price-box .price,
+.bottom-container a,
+#nav > li.over > a > span,
+#nav > li:hover > a > span, 
+.product-tabs li.active a, 
+a.link-learn,
+.pages .current,
+.pages li a:hover,
+.block-cart-header .price,
+.cart .totals tfoot th strong, .cart .totals tfoot td strong,
+.product-tabs li.active a:hover,
+#nav ul li.active > a > span    
+';
+
+$selectors['active_color_border'] = '
+.category-overlay #added,
+.category-overlay #added img,
+.product-view #added,
+.product-view #added .image-popup    
+';
+$selectors['button_1'] = '
+button.button span,
+#added a.button,
+.new-arrow.next,
+.new-arrow.prev,
+.more-views-arrow.prev,
+.more-views-arrow.next,
+.phones div ,
+.etheme_cp_btn_show,
+.back-to,
+a.readmore,
+.tintButton,
+.jcarousel-next-horizontal,
+.jcarousel-prev-horizontal,
+#message a,
+.view-mode strong,
+.btn-remove,
+.block-progress dt,
+.btn-remove2,
+.newproduct_grid     
+';
+$selectors['button_1_hover'] = '
+button.button:hover span,
+#added a.button:hover,
+.back-to:hover,
+a.readmore:hover,
+#message a:hover,
+.etheme_cp_btn_show:hover,
+.tintButton:hover,
+.btn-remove2:hover,
+.more-views-arrow.prev:hover,
+.more-views-arrow.next:hover,
+.new-arrow.next:hover,
+.new-arrow.prev:hover,
+.jcarousel-next-horizontal:hover,
+.jcarousel-prev-horizontal:hover    
+';
+if($menutype == 1){
+$nav = '#nav > li  > ul ul > li,';
+$nav_hover = '#nav > li  > ul ul > li:hover,';
+}else{
+$nav = '#nav > li ul > li,';
+$nav_hover = '#nav > li ul > li:hover,';
+}
+
+$selectors['button_2'] = '
+#nav > li > ul > li ul > li ,
+.left-categorys-container a,
+.button-show,
+.btn-edit,
+.block-progress dt.complete,
+button.btn-checkout span,
+button.button.btn-cart span,
+.block-cart-header button.checkout span    
+';
+$selectors['button_2_hover'] = '
+#nav > li > ul > li ul > li:hover ,
+.left-categorys-container a:hover, 
+button.btn-checkout span:hover,
+button.button.btn-cart:hover span,
+.block-cart-header button.checkout:hover span    
+';
+$selectors['light_color'] = '
+.nav-container,
+.footer2,
+.header .logo img,
+.etheme_cp .etheme_cp_head
+';
+$selectors['light_color_border'] = '
+#nav .chield,
+.etheme_cp,
+.block-cart-header #header-items    
+';
+$selectors['light_color_color'] = '
+#nav > li.active > a > span    
+';
+    function jsString($str='') { 
+        return trim(preg_replace("/('|\"|\r?\n)/", '', $str)); 
+    }     
+?>
+<script type="text/javascript">
+    var first_color_selector = '<?php echo jsString($selectors['light_color']).','.jsString($selectors['button_2']); ?>';
+    var first_color_border_selector = '<?php echo jsString($selectors['light_color_border']); ?>';
+    var first_color_default = '<?php echo themeOptions('light_color') ?>';
+    
+    var second_color_selector = '<?php echo jsString($selectors['button_1']); ?>';
+    var second_color_default = '<?php echo themeOptions('button1') ?>';
+    
+</script>
+
+<style type="text/css">
+    /* Active Color */
+    <?php echo jsString($selectors['active_color']); ?>              { color: #<?php echo themeOptions('active_color') ?>; }
+    
+    <?php echo jsString($selectors['active_color_border']); ?>       { border-color: #<?php echo themeOptions('active_color') ?>; }
+    
+    /* Button 1 */ 
+    <?php echo jsString($selectors['button_1']); ?>                  { background-color: #<?php echo themeOptions('button1') ?>;}    
+    
+    /* Button 1:hover */ 
+    <?php echo jsString($selectors['button_1_hover']); ?>            { background-color: #<?php echo themeOptions('button1_hover') ?>!important;}
+
+    /* Button 2 */    
+    <?php echo jsString($nav.$selectors['button_2']); ?>             { background-color: #<?php echo themeOptions('button2') ?>;} 
+    /* Button 2:hover */
+    <?php echo jsString($nav_hover.$selectors['button_2_hover']); ?> { background-color: #<?php echo themeOptions('button2_hover') ?>!important;}
+    
+    /* Light Color */
+    <?php echo jsString($selectors['light_color']); ?>               { background-color: #<?php echo themeOptions('light_color') ?>; }
+        
+    <?php echo jsString($selectors['light_color_border']); ?>        { border-color: #<?php echo themeOptions('light_color') ?>; }
+     
+    /*  */
+    .fieldset .legend,
+    .dashboard .box .box-title,
+    .data-table thead, .data-table thead tr                          { background-color: #f5f5f5;}
+        
+    <?php echo jsString($selectors['light_color_color']); ?>         { color: #<?php echo themeOptions('light_color') ?>; }
+    
+    /* Fonts */    
+    h1, h2, h3, h4, h5, h6,
+    #nav > li > a > span,
+    .product-tabs li a,
+    .block .block-title strong                                       { font-family: Ebrima, Tahoma;}
+    
+</style>
+
+<!-- ZOOM -->
+<?php $use_zoom = themeOptions('use_zoom'); ?>
+<?php if($use_zoom): ?>
+    <script type="text/javascript" src="<?php echo $this->getJsUrl('zoom/easyzoom.js'); ?>"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/easyzoom.css'); ?>" media="screen"/>
+<?php endif; ?>
+
+
+<?php $use_slideshow = themeOptions('use_slideshow'); ?>
+<?php if($use_slideshow): ?>
+<?php $speed = themeOptions('speed'); ?>
+<script type="text/javascript">
+    if(slide_on){
+        jQuery(document).ready(function($) {
+            $('.iosSlider').iosSlider({
+                desktopClickDrag: true,
+                touchMoveThreshold:4,
+                snapToChildren: true,
+                infiniteSlider: false,
+                autoSlide:true,
+                autoSlideTimer:<?php echo ($speed) ? $speed : '3000'  ?>,
+        		navSlideSelector: '.sliderNavi .naviItem',                
+                navNextSelector: '.iosSlider .next',
+                navPrevSelector: '.iosSlider .prev',
+        		onSlideChange: slideContentChange,
+        		onSlideComplete: slideContentComplete,
+        		onSliderLoaded: slideContentLoaded
+            }); 
+                       	
+        });        
+                
+    }
+</script>
+<?php endif; ?>
+
+<script type="text/javascript">
+        jQuery(document).ready(function (){
+        	jQuery('.toolbar').jqTransform({imgPath:'<?php echo $this->getSkinUrl('images/jqforms/'); ?>'});
+        	jQuery('.limiter').jqTransform({imgPath:'<?php echo $this->getSkinUrl('images/jqforms/'); ?>'});
+        });  
+</script>
+
+<style type="">
+    body{
+        background-color:#<?php echo themeOptions('maincolor') ?>;
+        background-attachment: <?php echo themeOptions('bg_attachment') ?>;
+        background-position: <?php echo themeOptions('bg_position_y') ?> <?php echo themeOptions('bg_position_x') ?>;
+        background-repeat: <?php echo themeOptions('bg_repeat') ?>;
+    }   
+</style>
+<?php if(themeOptions('pattern') && themeOptions('pattern') != ''): ?>
+    <style type="text/css">
+        body{ background-image: url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'wysiwyg/decostore/'.themeOptions('pattern') ?>); }    
+    </style>
+<?php endif; ?>
+<script type="text/javascript">var bg_default = '<?php echo themeOptions('maincolor') ?>'; var pattern_default = 'url(<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'wysiwyg/decostore/'.themeOptions('pattern') ?>)';</script>

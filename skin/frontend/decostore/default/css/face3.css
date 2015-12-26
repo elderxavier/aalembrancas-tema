@@ -1,0 +1,25 @@
+ a,  a:hover { text-decoration: none ! important; }
+ a:hover,  a:hover * { color: #000000 ! important; }
+ img { display: block ! important; }
+ html,  body,  .fan_box,  .full_widget,  .full_widget * { border: medium none #ffffff ! important; margin: 0pt ! important; padding: 0pt ! important; background: transparent none repeat scroll 0% 0% ! important; }
+ .profileimage,  .name_block,  .connect_widget_connected_text,  .connect_widget_not_connected_text,  .connect_widget_user_action { display: none ! important; }
+ .full_widget { position: relative ! important; padding-top: 44px ! important; }
+ .connect_top,  .connect_action,  .connect_widget,  .connect_button_slider,  .connect_button_container,  .connect_widget_like_button { overflow: visible ! important; display: block ! important; height: 24px ! important; }
+ .connect_widget_interactive_area,  .connect_widget_interactive_area td { height: 30px ! important; }
+ .connect_top { position: absolute ! important; top: 0pt ! important; left: 0pt ! important; width: 100% ! important; }
+ .connect_widget_interactive_area { float: right ! important; margin-right: 10px ! important; border-spacing: 0pt ! important; }
+ .connect_widget_like_button { position: relative ! important; line-height: 24px ! important; }
+.connect_widget_like_button .tombstone_cross { float: left; display: block ! important; width: 24px ! important; height: 24px ! important; background-image:url("http://8theme.com/demo/decostore/skin/frontend/decostore/default/images/facebook3.png") ! important; background-repeat: no-repeat ! important; }
+.like_button_no_like .tombstone_cross { background-position: 0pt 0pt ! important; }
+.like_button_like .tombstone_cross { background-position: bottom center ! important; }
+ .connect_widget_like_button .liketext { padding: 0pt 0pt 0pt 7px ! important; display: block ! important; float: left; height: 24px ! important; line-height: 24px ! important; color: #999999 ! important; }
+ .total { display: block ! important; margin-bottom: 13px ! important; padding-top: 1px ! important; color: #999999 ! important; font-size: 11px ! important; font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif; }
+ .fan_box .connections { margin-right: -20px ! important; }
+ .grid_item { margin: 0pt 20px 13px 0pt ! important; width: 60px ! important; }
+ .grid_item a { display: block ! important; color: #333333 ! important; }
+ .grid_item a:hover { color: #f12b63 ! important; }
+ .grid_item img { border-bottom: 1px solid #e5e5e5 ! important; padding: 5px ! important; background: #ffffff none repeat scroll 0% 0% ! important; margin-bottom: 3px ! important; }
+ .grid_item a:hover img { border-bottom: 1px solid #c5c5c5 ! important; }
+
+
+#bootloader_1FDre { height: 42px; }

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ThemeOptions_ExtraConfig>
+            <version>1.0.0</version>
+            <depends>
+            <!-- no dependencies -->
+            </depends>
+        </ThemeOptions_ExtraConfig>
+    </modules>
+	<global>
+		<models>
+            <!-- ... -->
+            <ExtraConfig>
+                <class>ThemeOptions_ExtraConfig_Model</class>
+            </ExtraConfig>   
+            <!-- ... -->
+        </models>
+		<helpers>
+			<ExtraConfig>
+				<class>ThemeOptions_ExtraConfig_Helper</class>
+			</ExtraConfig>
+		</helpers>
+	    <resources />
+	    <extraconfig />
+	    <blocks>
+            <mygeneral><class>ThemeOptions_ExtraConfig_Block</class></mygeneral>
+		</blocks>
+	</global>
+	<!---->
+    <adminhtml>   
+        <layout>
+            <updates>
+                <ExtraConfig>
+                    <file>options.xml</file>
+                </ExtraConfig>
+            </updates>
+        </layout>
+    </adminhtml>    
+</config>

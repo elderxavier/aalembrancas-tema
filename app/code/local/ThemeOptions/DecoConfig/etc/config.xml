@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ThemeOptions_DecoConfig>
+            <version>1.0.0</version>
+            <depends>
+            <!-- no dependencies -->
+            </depends>
+        </ThemeOptions_DecoConfig>
+    </modules>
+	<global>
+		<models>
+            <!-- ... -->
+            <DecoConfig>
+                <class>ThemeOptions_DecoConfig_Model</class>
+            </DecoConfig>   
+            <!-- ... -->
+        </models>
+		<helpers>
+			<DecoConfig>
+				<class>ThemeOptions_DecoConfig_Helper</class>
+			</DecoConfig>
+		</helpers>
+	    <resources />
+	    <DecoConfig />
+	    <blocks>
+            <mygeneral><class>ThemeOptions_DecoConfig_Block</class></mygeneral>
+		</blocks>
+	</global>
+	<!---->
+	<default>
+		<deco>
+			<generaloptions>
+                <menutype>1</menutype>
+                <topbanner>default/phone.png</topbanner>
+				<layer>1</layer>
+				<additional_nav>Clearance</additional_nav>
+				<additional_nav_href>#</additional_nav_href>
+			</generaloptions>
+			<background>
+                <maincolor>efefef</maincolor>
+                <pattern>default/pattern.png</pattern>
+                <bg_repeat></bg_repeat>
+                <bg_attachment></bg_attachment>
+                <bg_position_x></bg_position_x>
+                <bg_position_y></bg_position_y>
+			</background>            
+            <product_list>
+				<layer>1</layer>
+            </product_list>
+			<share>
+				<use_share>1</use_share>
+				<share_code><![CDATA[
+<div style="clear: both;">&nbsp;</div>
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>            
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4ee497253584a61e"></script>
+            ]]></share_code>
+			</share>
+			<slideshow>
+				<use_slideshow>1</use_slideshow>
+				<speed>8000</speed>
+                <slides_count>2</slides_count>
+			</slideshow>
+			<productpage>
+				<use_zoom>1</use_zoom>
+				<use_carousel>1</use_carousel>
+			</productpage>
+            <colors>
+                <active_color>00a0dc</active_color>
+                <light_color>ff7a13</light_color>
+                <second_color>009dda</second_color>
+                <button1>009cd8</button1>
+                <button1_hover>ff790b</button1_hover>
+                <button2>ff790b</button2>
+                <button2_hover>009cd8</button2_hover>
+            </colors>
+            <footer>
+                <use_prefooter>1</use_prefooter>
+                <use_facebook>1</use_facebook>
+                <fb_id>80655071208</fb_id>
+                <fb_title>Facebook</fb_title>
+                <fb_text>Lorem ipsum...</fb_text>
+                
+                <use_twitter>1</use_twitter>
+                <tw_title>Twitter</tw_title>
+                <tw_id>8theme</tw_id>
+                <tw_text>Lorem ipsum...</tw_text>
+                
+                <block_1_title>Contact Us</block_1_title>
+                <block_2_title>About Us</block_2_title>
+                <block_1><![CDATA[
+<p class="phones">(000) 123.456.7890<br/>
+(000) 123.456.7890</p>
+<p class="phones">(000) 123.456.7890<br/>
+(000) 123.456.7890</p>
+<p class="phones">(000) 123.456.7890<br/>
+(000) 123.456.7890</p>      
+                ]]></block_1>
+                <block_2><![CDATA[
+<p>The standard chunk of Lorem Ipsum 
+used since the 1500s is reproduced 
+below for those interested. Sections 
+1.10.32 and 1.10.33 from "de Finibus 
+Bonorum et Malorum" by Cicero are 
+also reproduced in their exact original 
+form, accompanied by English 
+versions from the 1914 translation 
+by H. Rackham.</p>   
+                ]]></block_2>
+                
+            </footer>
+		</deco>
+	</default>
+	<!---->  
+</config>

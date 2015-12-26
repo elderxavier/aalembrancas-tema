@@ -1,0 +1,100 @@
+
+<?php if(themeOptions('use_prefooter')): ?>
+    <div class="bottom-container col4-set">
+        <div class="col-1">
+            <h2><?php echo themeOptions('block_1_title') ?></h2>
+            <?php echo themeOptions('block_1') ?>                
+        </div>
+        <div class="col-2">
+            <h2><?php echo themeOptions('block_2_title') ?></h2>
+            <?php echo themeOptions('block_2') ?>        
+        </div>
+        <div class="col-3">
+            <h2><?php echo themeOptions('fb_title') ?></h2>
+            <?php if(themeOptions('use_facebook')): ?>
+                <fb:fan profileid="<?php echo themeOptions('fb_id') ?>" stream="0" connections="6" logobar="0" width="220" 
+                css="<?php echo $this->getSkinUrl() ?>css/face3.css?9508"></fb:fan>
+                <div id="fb-root"></div>
+                <script type="text/javascript">
+                  window.fbAsyncInit = function() {
+                    FB.init({status: true, cookie: true, xfbml: true});
+                  };
+                
+                  (function() {
+                    var e = document.createElement('script'); e.async = true;
+                    e.src = document.location.protocol +
+                    '//connect.facebook.net/en_US/all.js';
+                    document.getElementById('fb-root').appendChild(e);
+                  }());
+                </script>
+            <?php else: ?>
+                <?php echo themeOptions('fb_text') ?>        
+            <?php endif; ?>
+    
+        </div>
+        <div class="col-4">
+            <h2><?php echo themeOptions('tw_title') ?></h2>
+            <?php if(themeOptions('use_twitter')): ?>
+                <div class="twitterWidget" data-user="<?php echo themeOptions('tw_id') ?>">
+                        <div class="twitterContent">
+                        <a href="http://twitter.com/<?php echo themeOptions('tw_id') ?>" class="twitterUser">@<?php echo themeOptions('tw_id') ?></a>
+                        <ul class="twitterList">
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <script type="text/javascript">
+                    var el		= {
+                        widget				: jQuery('.twitterWidget'),
+                        twitterList			: jQuery('.twitterWidget').find(".twitterList"),
+                    },
+                    utils	= {
+                        username		: el.widget.data("user"),
+                        tweetNum		: parseInt(el.widget.data("num")) || 2,
+                        currentIndex	: 0,
+                        callback		: function(){},
+                        isReady			: false,
+                        height			: 0
+                    }	
+                    getTweets(el, utils);
+                </script> 
+            <?php else: ?>
+                <?php echo themeOptions('tw_text') ?>        
+            <?php endif; ?>
+   
+        </div>
+    </div>
+<?php endif; ?>
+
+<div class="footer footer1">
+    <div class="col4-set">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_shipping')->toHtml(); ?>
+    </div>
+</div>
+<div class="footer footer2">
+        <div class="f-right">
+            <div class="footer-right">
+                <div class="right-conteiner">
+                    <div class="clear"></div>
+                </div>
+                <div class="right-conteiner">
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_time')->toHtml(); ?>
+                    <div id="message"><a href="#top" id="top-link"><span><?php echo $this->__('Back to top') ?></span></a></div> 
+                    <div style="clear: both;"></div>
+                </div>                
+            </div>
+        </div>
+        
+        <div class="f-left footer-left">
+            
+        </div>    
+            <?php echo $this->getChildHtml('bottomContainer') ?>
+        <div class="f-left">
+            <?php echo $this->getChildHtml('footer_links') ?>
+            <?php echo $this->getCopyright() ?>&nbsp;
+            <?php echo $this->getChildHtml('cms_footer_links') ?>
+        </div>
+        <div class="f-right">
+            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('verifi')->toHtml(); ?>
+        </div>
+</div>
